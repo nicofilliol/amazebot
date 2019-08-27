@@ -54,7 +54,6 @@ void loop()
     
     if(rosOK() == true) {
         publish(); // Publish all ROS messages
-        nh.spinOnce(); // Receive messages
     } 
     else {
         desiredSpeed = cmd_vel(0.00, 0.0); // Stop locally because message not getting through anymore
@@ -68,5 +67,6 @@ void loop()
 
     cmd_vel_timeout++;
     timestamp = millis();
+    nh.spinOnce(); // Receive messages
   }
 }
