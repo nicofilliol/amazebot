@@ -23,7 +23,7 @@
 #define RIGHT_MOTOR_DIR 5
 #define LEFT_MOTOR_DIR 6
 
-#define IR_LEFT A2
+#define IR_LEFT A5 // A2 connector broken, switched to LINE 1 on Arduino Shield
 #define IR_FRONT A3
 #define IR_RIGHT A4
 
