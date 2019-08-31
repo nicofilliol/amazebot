@@ -59,7 +59,7 @@ void loop()
         desiredSpeed = cmd_vel(0.00, 0.0); // Stop locally because message not getting through anymore
     }
     
-    if (cmd_vel_timeout >= 5)
+    if (cmd_vel_timeout >= 10)
     {
         desiredSpeed = cmd_vel(0.00, 0.0);
         cmd_vel_pub.publish(&stop_msg); // Stop robot after timeout when not receiving any new messages
